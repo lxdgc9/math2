@@ -26,7 +26,6 @@ import {
   Typography,
 } from '@mui/material';
 import Iconify from 'src/components/iconify/iconify';
-import AccordionView from './accordion-view';
 
 // ----------------------------------------------------------------------
 
@@ -118,76 +117,6 @@ const ThuThachTinhNham = lazy(() => import('src/pages/home/tro-choi/thu-thach-ti
 const GiaiMaOchu = lazy(() => import('src/pages/home/tro-choi/giai-ma-o-chu'));
 
 // ----------------------------------------------------------------------
-const Transition = forwardRef(
-  (
-    props: TransitionProps & {
-      children: React.ReactElement;
-    },
-    ref: React.Ref<unknown>
-  ) => <Slide direction="up" ref={ref} {...props} />
-);
-
-function CustomFab() {
-  const dialog = useBoolean();
-
-  return (
-    <>
-      <Fab
-        style={{
-          margin: 0,
-          top: 'auto',
-          right: 20,
-          bottom: 20,
-          left: 'auto',
-          position: 'fixed',
-        }}
-        variant="extended"
-        size="medium"
-        color="primary"
-        onClick={dialog.onTrue}
-      >
-        Hướng dẫn
-      </Fab>
-
-      <Dialog
-        fullScreen
-        open={dialog.value}
-        onClose={dialog.onFalse}
-        TransitionComponent={Transition}
-      >
-        <AppBar position="relative" color="default">
-          <Toolbar>
-            <IconButton color="inherit" edge="start" onClick={dialog.onFalse}>
-              <Iconify icon="mingcute:close-line" />
-            </IconButton>
-
-            <Typography variant="h6" sx={{ flex: 1, ml: 2 }}>
-              Sound
-            </Typography>
-
-            <Button autoFocus color="inherit" variant="contained" onClick={dialog.onFalse}>
-              Save
-            </Button>
-          </Toolbar>
-        </AppBar>
-
-        <AccordionView />
-
-        <List>
-          <ListItemButton>
-            <ListItemText primary="Phone ringtone" secondary="Titania" />
-          </ListItemButton>
-
-          <Divider />
-
-          <ListItemButton>
-            <ListItemText primary="Default notification ringtone" secondary="Tethys" />
-          </ListItemButton>
-        </List>
-      </Dialog>
-    </>
-  );
-}
 
 export const homeRoutes = [
   {
@@ -198,7 +127,6 @@ export const homeRoutes = [
           <Suspense fallback={<LoadingScreen />}>
             <Outlet />
           </Suspense>
-          <CustomFab />
         </HomeLayout>
       </AuthGuard>
     ),

@@ -17,7 +17,7 @@ export default function Page() {
       </Helmet>
 
       <Container maxWidth={false}>
-        <GeoGebra appName="classic" showToolBar={false} filename={GGB} />
+        <GeoGebra appName="classic" showToolBar={false} filename={GGB} idTurtorial="do-thi-ham-so-bac-3" />
       </Container>
     </>
   );
