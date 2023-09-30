@@ -13,11 +13,17 @@ export default function Page() {
   return (
     <>
       <Helmet>
-        <title> Phân phối Pascal </title>
+        <title> Phân phối Siêu bội </title>
       </Helmet>
 
       <Container maxWidth={false}>
-        <GeoGebra appName="classic" filename={GGB} showAlgebraInput={false} />
+        <GeoGebra
+          appName="classic"
+          filename={GGB}
+          showAlgebraInput={false}
+          id="phan-phoi-sieu-boi"
+          title="Phân phối Siêu bội"
+        />
       </Container>
     </>
   );

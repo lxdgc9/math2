@@ -6,7 +6,7 @@ import { LoadingScreen } from '../loading-screen';
 import Turtorial from './Turtorial';
 
 export default function GeoGebra(props: any) {
-  const { idTurtorial } = props;
+  const { id, title } = props;
   const [width, setWidth] = useState(0);
   const ref = useRef<any>(null);
 
@@ -34,7 +34,7 @@ export default function GeoGebra(props: any) {
         </>
       )}
 
-      <Turtorial id={idTurtorial} />
+      <Turtorial id={id} title={title} />
     </div>
   );
 }

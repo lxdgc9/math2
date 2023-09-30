@@ -17,7 +17,13 @@ export default function Page() {
       </Helmet>
 
       <Container maxWidth={false}>
-        <GeoGebra appName="classic" filename={GGB} showAlgebraInput={false} />
+        <GeoGebra
+          appName="classic"
+          filename={GGB}
+          showAlgebraInput={false}
+          id="phan-phoi-f"
+          title="Phân phối F"
+        />
       </Container>
     </>
   );

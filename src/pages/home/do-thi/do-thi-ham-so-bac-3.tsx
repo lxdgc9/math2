@@ -17,7 +17,13 @@ export default function Page() {
       </Helmet>
 
       <Container maxWidth={false}>
-        <GeoGebra appName="classic" showToolBar={false} filename={GGB} idTurtorial="do-thi-ham-so-bac-3" />
+        <GeoGebra
+          appName="classic"
+          showToolBar={false}
+          filename={GGB}
+          id="do-thi-ham-so-bac-3"
+          title="Đồ thị hàm số bậc 3"
+        />
       </Container>
     </>
   );

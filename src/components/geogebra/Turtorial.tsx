@@ -1,15 +1,16 @@
+import { Button } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Dialog from '@mui/material/Dialog';
 import Fab from '@mui/material/Fab';
 import IconButton from '@mui/material/IconButton';
 import Slide from '@mui/material/Slide';
 import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography/Typography';
 import { TransitionProps } from '@mui/material/transitions';
 import { forwardRef } from 'react';
-import { useBoolean } from 'src/hooks/use-boolean';
-import Typography from '@mui/material/Typography/Typography';
-import { Button, Divider, List, ListItemButton, ListItemText } from '@mui/material';
 import Iconify from 'src/components/iconify/iconify';
+import { useBoolean } from 'src/hooks/use-boolean';
+import AccordionView from './accordion-view';
 
 const Transition = forwardRef(
   (
@@ -20,7 +21,13 @@ const Transition = forwardRef(
   ) => <Slide direction="up" ref={ref} {...props} />
 );
 
-export default function Turtorial({ id }: { id: string }) {
+type Props = {
+  id: string;
+  title: string;
+};
+
+export default function Turtorial(props: Props) {
+  const { id, title } = props;
   const dialog = useBoolean();
 
   return (
@@ -39,7 +46,7 @@ export default function Turtorial({ id }: { id: string }) {
         color="primary"
         onClick={dialog.onTrue}
       >
-        Hướng dẫn
+        Hướng dẫn về {title}
       </Fab>
 
       <Dialog
@@ -55,26 +62,16 @@ export default function Turtorial({ id }: { id: string }) {
             </IconButton>
 
             <Typography variant="h6" sx={{ flex: 1, ml: 2 }}>
-              Sound
+              {title}
             </Typography>
 
             <Button autoFocus color="inherit" variant="contained" onClick={dialog.onFalse}>
-              Save {id}
+              Đóng
             </Button>
           </Toolbar>
         </AppBar>
 
-        <List>
-          <ListItemButton>
-            <ListItemText primary="Phone ringtone" secondary="Titania" />
-          </ListItemButton>
-
-          <Divider />
-
-          <ListItemButton>
-            <ListItemText primary="Default notification ringtone" secondary="Tethys" />
-          </ListItemButton>
-        </List>
+        <AccordionView id={id} />
       </Dialog>
     </>
   );
