@@ -50,7 +50,6 @@ export default function Turtorial(props: Props) {
       </Fab>
 
       <Dialog
-        fullScreen
         open={dialog.value}
         onClose={dialog.onFalse}
         TransitionComponent={Transition}

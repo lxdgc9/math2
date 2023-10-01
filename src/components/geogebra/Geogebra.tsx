@@ -25,7 +25,6 @@ export default function GeoGebra(props: any) {
             showMenuBar={false}
             showToolBar
             showZoomButtons
-            showFullscreenButton
             showToolBarHelp={false}
             showLogging={false}
             LoadComponent={() => <LoadingScreen />}

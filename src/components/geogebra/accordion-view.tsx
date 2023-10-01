@@ -1,4 +1,3 @@
-import { useState } from 'react';
 // @mui
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -19,27 +18,49 @@ import ComponentBlock from './component-block';
 type AccordionType = {
   id: number;
   heading: string;
-  detail: string;
+  detail: React.ReactNode;
 };
 
 const phan_phoi_chuan: AccordionType[] = [
   {
     id: 1,
     heading: 'Phân phối chuẩn là gì?',
-    detail:
-      'Phân phối chuẩn, còn gọi là phân phối Gauss hay hình chuông Gauss, là một phân phối xác suất có dạng tổng quát giống nhau, chỉ khác tham số vị trí (giá trị trung bình μ) và tỉ lệ (phương sai σ2)',
+    detail: (
+      <div>
+        <p>
+          Phân phối chuẩn, còn gọi là phân phối Gauss hay hình chuông Gauss, là một phân phối xác
+          suất có dạng tổng quát giống nhau, chỉ khác tham số vị trí (giá trị trung bình μ) và tỉ lệ
+          (phương sai σ2)
+        </p>
+      </div>
+    ),
   },
   {
     id: 2,
     heading: 'Các tham số của phân phối chuẩn',
-    detail: `
-    Giá trị trung bình μ: Giá trị trung bình của phân phối, là điểm tập trung của phân phối.
-    Độ lệch chuẩn σ: Độ rộng của phân phối, là khoảng cách giữa giá trị trung bình và điểm cách xa 50% dữ liệu.`,
+    detail: (
+      <div>
+        <p>
+          • Giá trị trung bình μ: Giá trị trung bình của phân phối, là điểm tập trung của phân phối.
+        </p>
+        <p>
+          • Độ lệch chuẩn σ: Độ rộng của phân phối, là khoảng cách giữa giá trị trung bình và điểm
+          cách xa 50% dữ liệu.
+        </p>
+      </div>
+    ),
   },
   {
     id: 3,
     heading: 'Đồ thị của phân phối chuẩn',
-    detail: `Đồ thị của phân phối chuẩn có dạng hình chuông, với đỉnh là giá trị trung bình μ. Khoảng 68,26% dữ liệu nằm trong khoảng ±1σ của giá trị trung bình, khoảng 95,44% dữ liệu nằm trong khoảng ±2σ của giá trị trung bình, và khoảng 99,73% dữ liệu nằm trong khoảng ±3σ của giá trị trung bình `,
+    detail: (
+      <div>
+        Đồ thị của phân phối chuẩn có dạng hình chuông, với đỉnh là giá trị trung bình μ. Khoảng
+        68,26% dữ liệu nằm trong khoảng ±1σ của giá trị trung bình, khoảng 95,44% dữ liệu nằm trong
+        khoảng ±2σ của giá trị trung bình, và khoảng 99,73% dữ liệu nằm trong khoảng ±3σ của giá trị
+        trung bình,
+      </div>
+    ),
   },
 ];
 
@@ -47,16 +68,31 @@ const phan_phoi_student: AccordionType[] = [
   {
     id: 1,
     heading: 'Phân phối Student là gì?',
-    detail: `Phân phối Student, còn gọi là phân phối t-Student, là một phân phối xác suất liên tục, được sử dụng để mô tả dữ liệu thu thập từ một mẫu ngẫu nhiên, khi phương sai tổng thể của tổng thể chưa biết.iiiiiiiiiuuuuuuui`,
+    detail: (
+      <div>
+        Phân phối Student, còn gọi là phân phối t-Student, là một phân phối xác suất liên tục, được
+        sử dụng để mô tả dữ liệu thu thập từ một mẫu ngẫu nhiên, khi phương sai tổng thể của tổng
+        thể chưa biết.
+      </div>
+    ),
   },
   {
     id: 2,
     heading: 'Các tham số của phân phối Student',
-    detail: `
-      Giá trị trung bình μ: Giá trị trung bình của phân phối.
-      Độ lệch chuẩn σ: Độ lệch chuẩn của tổng thể.
-      Cỡ mẫu n: Số quan sát trong mẫu
-      `,
+    detail: (
+      <p>
+        Phân phối Student có hai tham số:
+        <ul>
+          <li>
+            <strong>Giá trị trung bình μ:</strong> Giá trị trung bình của phân phối, là điểm tập
+            trung của phân phối.
+          </li>
+          <li>
+            <strong>Độ lệch chuẩn σ:</strong> Độ lệch chuẩn của tổng thể.
+          </li>
+        </ul>
+      </p>
+    ),
   },
   {
     id: 3,
@@ -70,17 +106,36 @@ const phan_phoi_chi_binh_phuong: AccordionType[] = [
   {
     id: 1,
     heading: 'Phân phối chi-bình phương là gì?',
-    detail:
-      'Phân phối chi-bình phương là một phân phối xác suất liên tục, được sử dụng để mô tả tổng của các bình phương của các biến ngẫu nhiên chuẩn độc lập. Phân phối chi-bình phương có một tham số là bậc tự do (df), là số biến ngẫu nhiên độc lập trong tổng.',
+    detail: (
+      <div>
+        <p>
+          Phân phối chi-bình phương là một phân phối xác suất liên tục, được sử dụng để mô tả tổng
+          của các bình phương của các biến ngẫu nhiên chuẩn độc lập. Phân phối chi-bình phương có
+          một tham số là bậc tự do (df), là số biến ngẫu nhiên độc lập trong tổng.
+        </p>
+      </div>
+    ),
   },
   {
     id: 2,
     heading: 'Các đặc điểm của phân phối chi-bình phương',
-    detail: `
-    Giá trị trung bình: df/2
-    Phương sai: df
-    Đồ thị: Đồ thị của phân phối chi-bình phương có dạng hình chuông, với đỉnh là giá trị trung bình. Độ rộng của phân phối phụ thuộc vào bậc tự do df. Khi bậc tự do df càng lớn, phân phối chi-bình phương càng giống với phân phối chuẩn.
-      `,
+    detail: (
+      <div>
+        <ul>
+          <li>
+            <strong>Giá trị trung bình:</strong> df/2
+          </li>
+          <li>
+            <strong>Phương sai:</strong> df
+          </li>
+          <li>
+            <strong>Đồ thị:</strong> Đồ thị của phân phối chi-bình phương có dạng hình chuông, với
+            đỉnh là giá trị trung bình. Độ rộng của phân phối phụ thuộc vào bậc tự do df. Khi bậc tự
+            do df càng lớn, phân phối chi-bình phương càng giống với phân phối chuẩn.
+          </li>
+        </ul>
+      </div>
+    ),
   },
 ];
 
@@ -105,7 +160,6 @@ export default function AccordionView(props: Props) {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>{item.detail}</Typography>
-                  <img src="http://webcoban.vn/image/flower.gif" alt='dsd' />
                 </AccordionDetails>
               </Accordion>
             ))}

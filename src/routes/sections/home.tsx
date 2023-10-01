@@ -122,13 +122,13 @@ export const homeRoutes = [
   {
     path: 'home',
     element: (
-      <AuthGuard>
+      // <AuthGuard>
         <HomeLayout>
           <Suspense fallback={<LoadingScreen />}>
             <Outlet />
           </Suspense>
         </HomeLayout>
-      </AuthGuard>
+      // </AuthGuard>
     ),
     children: [
       { element: <IndexPage />, index: true },
