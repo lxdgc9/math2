@@ -17,7 +17,13 @@ export default function Page() {
       </Helmet>
 
       <Container maxWidth={false}>
-        <GeoGebra appName="classic" showToolBar={false} filename={GGB} />
+        <GeoGebra
+          appName="classic"
+          showToolBar={false}
+          filename={GGB}
+          id="do-lech-chuan"
+          title="Độ lệch chuẩn"
+        />
       </Container>
     </>
   );

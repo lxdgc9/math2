@@ -33,7 +33,7 @@ export default function GeoGebra(props: any) {
         </>
       )}
 
-      <Turtorial id={id} title={title} />
+      {id && title && <Turtorial id={id} title={title} />}
     </div>
   );
 }
