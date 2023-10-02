@@ -49,11 +49,7 @@ export default function Turtorial(props: Props) {
         Hướng dẫn về {title}
       </Fab>
 
-      <Dialog
-        open={dialog.value}
-        onClose={dialog.onFalse}
-        TransitionComponent={Transition}
-      >
+      <Dialog open={dialog.value} onClose={dialog.onFalse} TransitionComponent={Transition}>
         <AppBar position="relative" color="default">
           <Toolbar>
             <IconButton color="inherit" edge="start" onClick={dialog.onFalse}>
