@@ -1,4 +1,4 @@
-import React, { forwardRef, lazy, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 // auth
 import { AuthGuard } from 'src/auth/guard';
@@ -6,26 +6,6 @@ import { AuthGuard } from 'src/auth/guard';
 import HomeLayout from 'src/layouts/home';
 // components
 import { LoadingScreen } from 'src/components/loading-screen';
-import Fab from '@mui/material/Fab';
-import Dialog from '@mui/material/Dialog';
-import { useBoolean } from 'src/hooks/use-boolean';
-import { TransitionProps } from '@mui/material/transitions';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogContent from '@mui/material/DialogContent';
-import DialogActions from '@mui/material/DialogActions';
-import {
-  AppBar,
-  Button,
-  Divider,
-  IconButton,
-  List,
-  ListItemButton,
-  ListItemText,
-  Slide,
-  Toolbar,
-  Typography,
-} from '@mui/material';
-import Iconify from 'src/components/iconify/iconify';
 
 // ----------------------------------------------------------------------
 

@@ -19,6 +19,7 @@ export default function Page() {
       <Container maxWidth={false}>
         <GeoGebra
           appName="classic"
+          language="vi"
           filename={GGB}
           showAlgebraInput={false}
           id="phan-phoi-pascal"
