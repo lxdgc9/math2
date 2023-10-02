@@ -21,8 +21,6 @@ export default function Page() {
           appName="classic"
           showToolBar={false}
           filename={GGB}
-          id="do-thi-ham-so-bac-2"
-          title="Đồ thị hàm số bậc 2"
         />
         d{' '}
       </Container>

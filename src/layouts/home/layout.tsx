@@ -40,7 +40,7 @@ export default function HomeLayout({ children }: Props) {
       <>
         {/* <Header onOpenNav={nav.onTrue} /> */}
 
-        {lgUp ? renderHorizontal : renderNavVertical}
+        {/* {lgUp ? renderHorizontal : renderNavVertical} */}
 
         <Main>{children}</Main>
       </>
@@ -59,7 +59,7 @@ export default function HomeLayout({ children }: Props) {
             flexDirection: { xs: 'column', md: 'row' },
           }}
         >
-          {lgUp ? renderNavMini : renderNavVertical}
+          {/* {lgUp ? renderNavMini : renderNavVertical} */}
 
           <Main>{children}</Main>
         </Box>
@@ -78,7 +78,7 @@ export default function HomeLayout({ children }: Props) {
           flexDirection: { xs: 'column', md: 'row' },
         }}
       >
-        {renderNavVertical}
+        {/* {renderNavVertical} */}
 
         <Main>{children}</Main>
       </Box>
