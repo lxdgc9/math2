@@ -20,7 +20,6 @@ export default function GeoGebra(props: any) {
         <>
           <Geogebra
             appName="classic"
-            language="vi"
             width={width}
             showMenuBar={false}
             showToolBar

@@ -1,5 +1,4 @@
 // @mui
-import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -8,8 +7,6 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 // components
 import Iconify from 'src/components/iconify';
-// _mock
-import { _mock } from './_mock';
 //
 import ComponentBlock from './component-block';
 
