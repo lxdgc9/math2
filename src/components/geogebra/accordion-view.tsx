@@ -11,16 +11,37 @@ import Iconify from 'src/components/iconify';
 import imgFromBase from './images/from-base.png';
 import imgToBase from './images/to-base.png';
 import imgExpand from './images/expand.png';
-import imgFitPoly from './images/fit-poly.png';
-import imgstdevp from './images/stdevp.png';
-import imgSDX from './images/sdx.png';
-import imgSDY from './images/sdy.png';
-import imgFitlineX from './images/fitlinex.png';
-import imgFitline from './images/fitline.png';
-import imgSpearman from './images/spearman.png';
-import imgCorrelationCoefficient from './images/correlation-coefficient.png';
-import imgRSquare from './images/rsquare.png';
+import imgFitPolyFunc from './images/fit-poly.function.png';
+import imgFitPolyEx from './images/fit-poly.example.png';
+import imgstdevpFunc from './images/stdevp.function.png';
+import imgstdevpEx from './images/stdevp.example.png';
+import imgSDXFunc from './images/sdx.function.png';
+import imgSDXEx from './images/sdx.example.png';
+import imgSDYFunc from './images/sdy.function.png';
+import imgSDYEx from './images/sdy.example.png';
+import imgFitlineXFunc from './images/fitlinex.function.png';
+import imgFitlineXEx from './images/fitlinex.example.png';
+import imgFitlineFunc from './images/fitline.function.png';
+import imgFitlineEx from './images/fitline.example.png';
+import imgSpearmanFunc from './images/spearman.function.png';
+import imgSpearmanEx from './images/spearman.example.png';
+import imgCorrelationCoefficientFunc from './images/correlation-coefficient.function.png';
+import imgCorrelationCoefficientEx from './images/correlation-coefficient.example.png';
+import imgRSquareFunc from './images/rsquare.function.png';
+import imgRSquareEx from './images/rsquare.example.png';
 import imgSigma from './images/sigma.png';
+import imgFitLogFunc from './images/fitlog.function.png';
+import imgFitLogEx from './images/fitlog.example.png';
+import imgFitLogisticFunc from './images/fitlogistic.function.png';
+import imgFitLogisticEx from './images/fitlogistic.example.png';
+import imgFitPowFunc from './images/fitpow.function.png';
+import imgFitPowEx from './images/fitpow.example.png';
+import imgFitExpFunc from './images/fitexp.function.png';
+import imgFitExpEx from './images/fitexp.example.png';
+import imgFitSinFunc from './images/fitsin.function.png';
+import imgFitSinEx from './images/fitsin.example.png';
+import imgFitGrowthFunc from './images/fitgrowth.function.png';
+import imgFitGrowthEx from './images/fitgrowth.example.png';
 
 // ----------------------------------------------------------------------
 
@@ -467,14 +488,21 @@ const da_thuc_noi_suy: AccordionType[] = [
     heading: 'Hàm FitPoly()',
     detail: (
       <div>
-        <img src={imgFitPoly} alt="fit-poly" />
-        <h4>Đầu vào:</h4>
+        <h4>Cách sử dụng</h4>
+        <img src={imgFitPolyFunc} alt="img-fit-poly-func" />
+
+        <h4>Tham số:</h4>
         <ul>
-          <li>Tập hợp các điểm</li>
-          <li>Bậc của đa thức nội suy</li>
+          <li>List of Points: Danh sách các điểm</li>
+          <li>Degree of Polynomial: Bậc của đa thức</li>
+          <li>Freehand Function: Chức năng tự do. Hàm được vẽ bởi Công cụ hình dạng tự do</li>
         </ul>
-        <h4>Đầu ra:</h4>
-        <p>Đa thức nội suy với bậc cho trước được tính toán dựa trên tập hợp các điểm đầu vào</p>
+
+        <h4>Kết quả:</h4>
+        <p>Đa thức nội suy với bậc cho trước được tính toán dựa trên các tham số đầu vào</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgFitPolyEx} alt="img-fit-poly-ex" />
       </div>
     ),
   },
@@ -483,17 +511,24 @@ const da_thuc_noi_suy: AccordionType[] = [
 const do_lech_chuan: AccordionType[] = [
   {
     id: 1,
-    heading: 'Hàm stdev()',
+    heading: 'Hàm stdev() hoặc SD()',
     detail: (
       <div>
-        <img src={imgstdevp} alt="stdevp" />
-        <h4>Đầu vào:</h4>
+        <h4>Cách sử dụng</h4>
+        <img src={imgstdevpFunc} alt="img-stdevp-func" />
+
+        <h4>Tham số:</h4>
         <ul>
-          <li>Danh sách các điểm</li>
-          <li>Danh sách các tần số</li>
+          <li>List of Raw Data: Danh sách các điểm</li>
+          <li>List of Numbers: Danh sách số</li>
+          <li>List of Frequencies: Danh sách tần số</li>
         </ul>
-        <h4>Đầu ra:</h4>
-        <p>Kết quả tính độ lệch chuẩn của các số trong danh sách</p>
+
+        <h4>Kết quả: </h4>
+        <p>Độ lệch chuẩn dựa trên các tham số đầu vào</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgstdevpEx} alt="img-stdevp-ex" />
       </div>
     ),
   },
@@ -502,13 +537,19 @@ const do_lech_chuan: AccordionType[] = [
     heading: 'Hàm SDX()',
     detail: (
       <div>
-        <img src={imgSDX} alt="sdx" />
-        <h4>Đầu vào:</h4>
+        <h4>Cách sử dụng</h4>
+        <img src={imgSDXFunc} alt="img-sdx-func" />
+
+        <h4>Tham số:</h4>
         <ul>
-          <li>Danh sách các điểm</li>
+          <li>List of Points: Danh sách các điểm</li>
         </ul>
-        <h4>Đầu ra:</h4>
+
+        <h4>Kết quả: </h4>
         <p>Trả về độ lệch chuẩn của tọa độ x của các điểm từ danh sách đã cho.</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgSDXEx} alt="img-sdx-ex" />
       </div>
     ),
   },
@@ -517,13 +558,19 @@ const do_lech_chuan: AccordionType[] = [
     heading: 'Hàm SDY()',
     detail: (
       <div>
-        <img src={imgSDY} alt="sdy" />
-        <h4>Đầu vào:</h4>
+        <h4>Cách sử dụng</h4>
+        <img src={imgSDYFunc} alt="img-sdy-func" />
+
+        <h4>Tham số:</h4>
         <ul>
-          <li>Danh sách các điểm</li>
+          <li>List of Points: Danh sách các điểm</li>
         </ul>
-        <h4>Đầu ra:</h4>
+
+        <h4>Kết quả: </h4>
         <p>Trả về độ lệch chuẩn của tọa độ y của các điểm từ danh sách đã cho.</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgSDYEx} alt="img-sdy-ex" />
       </div>
     ),
   },
@@ -535,13 +582,19 @@ const duong_hoi_quy: AccordionType[] = [
     heading: 'Hàm Fitline()',
     detail: (
       <div>
-        <img src={imgFitline} alt="fitline" />
-        <h4>Đầu vào:</h4>
+        <h4>Cách sử dụng</h4>
+        <img src={imgFitlineFunc} alt="img-fitline-func" />
+
+        <h4>Tham số:</h4>
         <ul>
-          <li>Danh sách các điểm</li>
+          <li>List of Points: Danh sách các điểm</li>
         </ul>
-        <h4>Đầu ra:</h4>
+
+        <h4>Kết quả: </h4>
         <p>Tính toán đường hồi quy y trên x của các điểm.</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgFitlineEx} alt="img-fitline-ex" />
       </div>
     ),
   },
@@ -550,13 +603,236 @@ const duong_hoi_quy: AccordionType[] = [
     heading: 'Hàm FitlineX()',
     detail: (
       <div>
-        <img src={imgFitlineX} alt="fitlinex" />
-        <h4>Đầu vào:</h4>
+        <h4>Cách sử dụng</h4>
+        <img src={imgFitlineXFunc} alt="img-fitlinex-func" />
+
+        <h4>Tham số:</h4>
         <ul>
-          <li>Danh sách các điểm</li>
+          <li>List of Points: Danh sách các điểm</li>
         </ul>
-        <h4>Đầu ra:</h4>
+
+        <h4>Kết quả: </h4>
         <p>Tính toán đường hồi quy x trên y của các điểm.</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgFitlineXEx} alt="img-fitlinex-ex" />
+      </div>
+    ),
+  },
+];
+
+const he_so_tuong_quan: AccordionType[] = [
+  {
+    id: 1,
+    heading: 'Hàm Spearman()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgSpearmanFunc} alt="img-spearman-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Points: Danh sách các điểm</li>
+          <li>List of Numbers: Danh sách các số</li>
+        </ul>
+
+        <h4>Kết quả: </h4>
+        <ul>
+          <li>
+            Trả về hệ số tương quan xếp hạng của Spearman của tọa độ x và tọa độ y của các điểm
+            trong danh sách.
+          </li>
+          <li>Trả về hệ số tương quan thứ hạng của Spearman của hai danh sách.</li>
+        </ul>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgSpearmanEx} alt="img-spearman-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 2,
+    heading: 'Hàm CorrelationCoefficient()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgCorrelationCoefficientFunc} alt="img-correlationcoefficient-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Points: Danh sách các điểm</li>
+          <li>List of x-coordinates: Danh sách tọa độ x</li>
+          <li>List of y-coordinates: Danh sách tọa độ y</li>
+        </ul>
+
+        <h4>Kết quả: </h4>
+        <ul>
+          <li>Tính hệ số tương quan mômen tích bằng cách sử dụng tọa độ của các điểm đã cho.</li>
+          <li>
+            Trả về hệ số tương quan xếp hạng của Spearman của tọa độ x và tọa độ y của các điểm
+            trong danh sách.
+          </li>
+        </ul>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgCorrelationCoefficientEx} alt="img-correlationcoefficient-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 3,
+    heading: 'Hàm RSquare()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgRSquareFunc} alt="img-rsquare-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Points: Danh sách các điểm</li>
+          <li>Function: Hàm số</li>
+        </ul>
+
+        <h4>Kết quả: </h4>
+        <p>
+          Tính hệ số xác định R² = 1 - SSE/Syy, giữa giá trị y của các điểm trong danh sách và giá
+          trị hàm của giá trị x trong danh sách.
+        </p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgRSquareEx} alt="img-rsquare-ex" />
+      </div>
+    ),
+  },
+];
+
+const hoi_quy: AccordionType[] = [
+  {
+    id: 1,
+    heading: 'Hàm FitLog()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgFitLogFunc} alt="img-fitlog-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Points: Danh sách các điểm</li>
+        </ul>
+
+        <h4>Kết quả: </h4>
+        <p>Tính toán đường cong hồi quy logarit.</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgFitLogEx} alt="img-fitlog-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 2,
+    heading: 'Hàm FitLogistic()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgFitLogisticFunc} alt="img-fitlogistic-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Points: Danh sách các điểm</li>
+        </ul>
+
+        <h4>Kết quả: </h4>
+        <p>Tính toán đường cong hồi quy ở dạng a/(1 + b e^(-kx)).</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgFitLogisticEx} alt="img-fitlogistic-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 3,
+    heading: 'Hàm FitPow()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgFitPowFunc} alt="img-fitpow-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Points: Danh sách các điểm</li>
+        </ul>
+
+        <h4>Kết quả: </h4>
+        <p>Tính toán đường cong hồi quy ở dạng a*x^b.</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgFitPowEx} alt="img-fitpow-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 4,
+    heading: 'Hàm FitExp()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgFitExpFunc} alt="img-fitexp-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Points: Danh sách các điểm</li>
+        </ul>
+
+        <h4>Kết quả: </h4>
+        <p>Tính toán đường cong hồi quy hàm mũ ở dạng a*(ℯ^(bx)).</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgFitExpEx} alt="img-fitexp-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 5,
+    heading: 'Hàm FitSin()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgFitSinFunc} alt="img-fitsin-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Points: Danh sách các điểm</li>
+        </ul>
+
+        <h4>Kết quả: </h4>
+        <p>Tính toán đường cong hồi quy có dạng a + b*sin(cx + d).</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgFitSinEx} alt="img-fitsin-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 6,
+    heading: 'Hàm FitGrowth()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgFitGrowthFunc} alt="img-fitgrowth-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Points: Danh sách các điểm</li>
+        </ul>
+
+        <h4>Kết quả: </h4>
+        <p>
+          Tính toán hàm có dạng a*b^x cho các điểm trong danh sách. (Rất giống với FitExp, chỉ ở
+          dạng hơi khác một chút).
+        </p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgFitGrowthEx} alt="img-fitgrowth-ex" />
       </div>
     ),
   },
@@ -571,8 +847,9 @@ const chuyen_co_so: AccordionType[] = [
         <img src={imgFromBase} alt="from-base" />
         <h4>Đầu vào:</h4>
         <ul>
-          <li>Số cần chuyển dạng text</li>
-          <li>Hệ số tương ứng</li>
+          <li>List of Raw Data: Danh sách các điểm</li>
+          <li>List of Numbers: Danh sách số</li>
+          <li>List of Frequencies: Danh sách tần số</li>
         </ul>
         <h4>Đầu ra:</h4>
         <p>Hàm FromBase chuyển từ một số cho trước và một hệ cho trước sang hệ số 10</p>
@@ -592,73 +869,6 @@ const chuyen_co_so: AccordionType[] = [
         </ul>
         <h4>Đầu ra:</h4>
         <p>Kết quả là số đã chuyển từ cơ số 10 sang cơ số đã cho</p>
-      </div>
-    ),
-  },
-];
-
-const he_so_tuong_quan: AccordionType[] = [
-  {
-    id: 1,
-    heading: 'Hàm Spearman()',
-    detail: (
-      <div>
-        <img src={imgSpearman} alt="spearman" />
-        <h4>Đầu vào:</h4>
-        <ul>
-          <li>Danh sách các điểm</li>
-        </ul>
-        <h4>Đầu ra:</h4>
-        <ul>
-          <li>
-            Trả về hệ số tương quan xếp hạng của Spearman của tọa độ x và tọa độ y của các điểm
-            trong danh sách.
-          </li>
-          <li>Trả về hệ số tương quan thứ hạng của Spearman của hai danh sách.</li>
-        </ul>
-      </div>
-    ),
-  },
-  {
-    id: 2,
-    heading: 'Hàm CorrelationCoefficient()',
-    detail: (
-      <div>
-        <img src={imgCorrelationCoefficient} alt="correlationcoefficient" />
-        <h4>Đầu vào:</h4>
-        <ul>
-          <li>Danh sách các điểm</li>
-          <li>Danh sách tọa độ x, danh sách tọa độ x</li>
-        </ul>
-        <h4>Đầu ra:</h4>
-        <ul>
-          <li>Tính hệ số tương quan mômen tích bằng cách sử dụng tọa độ của các điểm đã cho.</li>
-          <li>
-            Trả về hệ số tương quan xếp hạng của Spearman của tọa độ x và tọa độ y của các điểm
-            trong danh sách.
-          </li>
-        </ul>
-      </div>
-    ),
-  },
-  {
-    id: 3,
-    heading: 'Hàm RSquare()',
-    detail: (
-      <div>
-        <img src={imgRSquare} alt="rsquare" />
-        <h4>Đầu vào:</h4>
-        <ul>
-          <li>Danh sách các điểm</li>
-          <li>Hàm cho trước</li>
-        </ul>
-        <h4>Đầu ra:</h4>
-        <ul>
-          <li>
-            Tính hệ số xác định R² = 1 - SSE/Syy, giữa giá trị y của các điểm trong danh sách và giá
-            trị hàm của giá trị x trong danh sách.
-          </li>
-        </ul>
       </div>
     ),
   },
@@ -719,7 +929,7 @@ export default function AccordionView(props: Props) {
         {id === idInput && (
           <>
             {val.map((item, index) => (
-              <Accordion key={item.id} disabled={index === 3}>
+              <Accordion key={item.id}>
                 <AccordionSummary expandIcon={<Iconify icon="eva:arrow-ios-downward-fill" />}>
                   <Typography variant="subtitle1">{item.heading}</Typography>
                 </AccordionSummary>
@@ -773,6 +983,7 @@ export default function AccordionView(props: Props) {
         {renderContent(Object.keys({ chuyen_co_so })[0].replace(/_/g, '-'), chuyen_co_so)}
         {renderContent(Object.keys({ he_so_tuong_quan })[0].replace(/_/g, '-'), he_so_tuong_quan)}
         {renderContent(Object.keys({ xich_ma })[0].replace(/_/g, '-'), xich_ma)}
+        {renderContent(Object.keys({ hoi_quy })[0].replace(/_/g, '-'), hoi_quy)}
       </Stack>
     </Container>
   );
