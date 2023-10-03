@@ -8,8 +8,6 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 // components
 import Iconify from 'src/components/iconify';
 //
-import imgFromBase from './images/from-base.png';
-import imgToBase from './images/to-base.png';
 import imgFitPolyFunc from './images/fit-poly.function.png';
 import imgFitPolyEx from './images/fit-poly.example.png';
 import imgstdevpFunc from './images/stdevp.function.png';
@@ -28,7 +26,6 @@ import imgCorrelationCoefficientFunc from './images/correlation-coefficient.func
 import imgCorrelationCoefficientEx from './images/correlation-coefficient.example.png';
 import imgRSquareFunc from './images/rsquare.function.png';
 import imgRSquareEx from './images/rsquare.example.png';
-import imgSigma from './images/sigma.png';
 import imgFitLogFunc from './images/fitlog.function.png';
 import imgFitLogEx from './images/fitlog.example.png';
 import imgFitLogisticFunc from './images/fitlogistic.function.png';
@@ -63,6 +60,33 @@ import imgGeometricMeanFunc from './images/geometricmean.function.png';
 import imgGeometricMeanEx from './images/geometricmean.example.png';
 import imgMedianFunc from './images/median.function.png';
 import imgMedianEx from './images/median.example.png';
+import imgSigmaFunc from './images/sigma.function.png';
+import imgSigmaEx from './images/sigma.example.png';
+import imgFromBaseFunc from './images/frombase.function.png';
+import imgFromBaseEx from './images/frombase.example.png';
+import imgToBaseFunc from './images/tobase.function.png';
+import imgSolveFunc from './images/solve.function.png';
+import imgSolveEx from './images/solve.example.png';
+import imgExpandFunc from './images/expand.function.png';
+import imgExpandEx from './images/expand.example.png';
+import imgCommonDenominatorFunc from './images/commondenominator.function.png';
+import imgCommonDenominatorEx from './images/commondenominator.example.png';
+import imgDivisionFunc from './images/division.function.png';
+import imgDivisionEx from './images/division.example.png';
+import imgModFunc from './images/mod.function.png';
+import imgModEx from './images/mod.example.png';
+import imgCrossFunc from './images/cross.function.png';
+import imgCrossEx from './images/cross.example.png';
+import imgDotFunc from './images/dot.function.png';
+import imgDotEx from './images/dot.example.png';
+import imgIsPrimeFunc from './images/isprime.function.png';
+import imgIsPrimeEx from './images/isprime.example.png';
+import imgPreviousPrimeFunc from './images/previousprime.function.png';
+import imgPreviousPrimeEx from './images/previousprime.example.png';
+import imgPrimeFactorsFunc from './images/primefactos.function.png';
+import imgPrimeFactorsEx from './images/primefactors.example.png';
+import imgDivisorsFunc from './images/divisors.function.png';
+import imgDivisorsEx from './images/divisors.example.png';
 
 // ----------------------------------------------------------------------
 
@@ -1155,59 +1179,30 @@ const trung_binh_va_trung_vi: AccordionType[] = [
   },
 ];
 
-const chuyen_co_so: AccordionType[] = [
-  {
-    id: 1,
-    heading: 'Hàm FromBase()',
-    detail: (
-      <div>
-        <img src={imgFromBase} alt="from-base" />
-        <h4>Đầu vào:</h4>
-        <ul>
-          <li>List of Raw Data: Danh sách các điểm</li>
-          <li>List of Numbers: Danh sách số</li>
-          <li>List of Frequencies: Danh sách tần số</li>
-        </ul>
-        <h4>Đầu ra:</h4>
-        <p>Hàm FromBase chuyển từ một số cho trước và một hệ cho trước sang hệ số 10</p>
-      </div>
-    ),
-  },
-  {
-    id: 2,
-    heading: 'Hàm ToBase()',
-    detail: (
-      <div>
-        <img src={imgToBase} alt="to-base" />
-        <h4>Đầu vào:</h4>
-        <ul>
-          <li>Số nguyên dương dưới hệ cơ số 10</li>
-          <li>Hệ số cần chuyển</li>
-        </ul>
-        <h4>Đầu ra:</h4>
-        <p>Kết quả là số đã chuyển từ cơ số 10 sang cơ số đã cho</p>
-      </div>
-    ),
-  },
-];
-
 const xich_ma: AccordionType[] = [
   {
     id: 1,
     heading: 'Hàm SigmaXX()',
     detail: (
       <div>
-        <img src={imgSigma} alt="sigma" />
-        <h4>Đầu vào:</h4>
+        <h4>Cách sử dụng</h4>
+        <img src={imgSigmaFunc} alt="img-sigma-func" />
+
+        <h4>Tham số:</h4>
         <ul>
-          <li>Danh sách các điểm</li>
-          <li>Danh sách các số</li>
+          <li>List of Points: Danh sách các điểm</li>
+          <li>List of x-coordinates: Danh sách tọa độ x</li>
+          <li>List of y-coordinates: Danh sách tọa độ y</li>
         </ul>
-        <h4>Đầu ra:</h4>
+
+        <h4>Kết quả:</h4>
         <ul>
-          <li>Tính tổng các tích của tọa độ x và y.</li>
           <li>Tính tổng từ các số cho trước</li>
+          <li>Tính tổng các tích của tọa độ x và y.</li>
         </ul>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgSigmaEx} alt="img-sigma-ex" />
       </div>
     ),
   },
@@ -1226,6 +1221,326 @@ const xich_ma: AccordionType[] = [
     detail: (
       <div>
         <p>Tương tự SigmaYY()</p>
+      </div>
+    ),
+  },
+];
+
+const chuyen_co_so: AccordionType[] = [
+  {
+    id: 1,
+    heading: 'Hàm FromBase()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgFromBaseFunc} alt="img-frombase-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Number as Text: Số cho trước</li>
+          <li>Base: Cơ số phải nằm trong khoảng từ 2 đến 36. Số phải là số nguyên</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Chuyển đổi số từ cơ số đã cho thành cơ số thập phân</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgFromBaseEx} alt="img-fromabase-func" />
+      </div>
+    ),
+  },
+  {
+    id: 2,
+    heading: 'Hàm ToBase()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgToBaseFunc} alt="img-tobase-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Number as Text: Số cho trước</li>
+          <li>Base: Cơ số phải nằm trong khoảng từ 2 đến 36. Số phải là số nguyên</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Chuyển đổi số đã cho thành cơ số khác nhau</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgFromBaseEx} alt="img-fromabase-func" />
+      </div>
+    ),
+  },
+];
+
+const giai_phuong_trinh: AccordionType[] = [
+  {
+    id: 1,
+    heading: 'Hàm Solve()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgSolveFunc} alt="img-solve-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Equation: phương trình</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Trả về tập nghiệm của phương trình</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgSolveEx} alt="img-solve-ex" />
+      </div>
+    ),
+  },
+];
+
+const khai_trien_phuong_trinh: AccordionType[] = [
+  {
+    id: 1,
+    heading: 'Hàm Expand()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgExpandFunc} alt="img-expand-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Equation: Biểu thức</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Trả về kết quả sau khi khai triển biểu thức</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgExpandEx} alt="img-expand-ex" />
+      </div>
+    ),
+  },
+];
+
+const mau_so_chung: AccordionType[] = [
+  {
+    id: 1,
+    heading: 'Hàm CommonDenominator()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgCommonDenominatorFunc} alt="img-commondenominator-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Expression: Biểu thức</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Trả về hàm có mẫu số chung thấp nhất của hai biểu thức ở dạng phương trình</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgCommonDenominatorEx} alt="img-commondenominator-ex" />
+      </div>
+    ),
+  },
+];
+
+const phep_chia_va_so_du: AccordionType[] = [
+  {
+    id: 1,
+    heading: 'Hàm Division()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgDivisionFunc} alt="img-division-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Dividend Number: Số bị chia</li>
+          <li>Divisor Number: Số chia</li>
+          <li>Dividend Polynomial: Đa thức bị chia</li>
+          <li>Divisor Polynomial: Đa thức chia</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <ul>
+          <li>Cho biết thương số (phần nguyên của kết quả) và phần dư của phép chia hai số</li>
+          <li>Cho biết thương và số dư của phép chia hai đa thức</li>
+        </ul>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgDivisionEx} alt="img-division-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 2,
+    heading: 'Hàm Mod()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgModFunc} alt="img-mod-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Dividend Number: Số bị chia</li>
+          <li>Divisor Number: Số chia</li>
+          <li>Dividend Polynomial: Đa thức bị chia</li>
+          <li>Divisor Polynomial: Đa thức chia</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <ul>
+          <li>Trả về phần dư khi chia số bị chia cho số chia</li>
+          <li>Trả về phần còn lại khi chia đa thức bị chia cho đa thức chia.</li>
+        </ul>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgModEx} alt="img-mod-ex" />
+      </div>
+    ),
+  },
+];
+
+const so_nguyen_to: AccordionType[] = [
+  {
+    id: 1,
+    heading: 'Hàm IsPrime()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgIsPrimeFunc} alt="img-isprime-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Number: Số cho trước</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Cho kết quả đúng hoặc sai tùy thuộc vào số đó có phải là số nguyên tố hay không</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgIsPrimeEx} alt="img-isprime-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 2,
+    heading: 'Hàm PreviousPrime()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgPreviousPrimeFunc} alt="img-previousprime-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Number: Số cho trước</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Trả về số nguyên tố lớn nhất nhỏ hơn số đã nhập</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgPreviousPrimeEx} alt="img-previousprime-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 3,
+    heading: 'Hàm NextPrime()',
+    detail: (
+      <div>
+        <p>Tương tự như PreviousPrime, nhưng là lấy số nguyên tố nhỏ nhất lớn hơn số đã cho</p>
+      </div>
+    ),
+  },
+  {
+    id: 4,
+    heading: 'Hàm PrimeFactors()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgPrimeFactorsFunc} alt="img-primefactors-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Number: Số cho trước</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Trả về danh sách các số nguyên tố có tích bằng số đã cho</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgPrimeFactorsEx} alt="img-primefactors-ex" />
+      </div>
+    ),
+  },
+];
+
+const tich_vector: AccordionType[] = [
+  {
+    id: 1,
+    heading: 'Hàm Cross()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgCrossFunc} alt="img-cross-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Vector</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Tích có hướng của 2 vector</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgCrossEx} alt="img-mod-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 2,
+    heading: 'Hàm Dot()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgDotFunc} alt="img-dot-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Vector</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Tích vô hướng của 2 vector</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgDotEx} alt="img-dot-ex" />
+      </div>
+    ),
+  },
+];
+
+const uoc_so_va_boi_so: AccordionType[] = [
+  {
+    id: 1,
+    heading: 'Hàm Divisors()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgDivisorsFunc} alt="img-divisors-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Number: Số cho trước</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Tính số lượng tất cả các ước số dương, kể cả chính số đó</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgDivisorsEx} alt="img-divisors-ex" />
       </div>
     ),
   },
@@ -1307,6 +1622,19 @@ export default function AccordionView(props: Props) {
           Object.keys({ trung_binh_va_trung_vi })[0].replace(/_/g, '-'),
           trung_binh_va_trung_vi
         )}
+        {renderContent(Object.keys({ giai_phuong_trinh })[0].replace(/_/g, '-'), giai_phuong_trinh)}
+        {renderContent(
+          Object.keys({ khai_trien_phuong_trinh })[0].replace(/_/g, '-'),
+          khai_trien_phuong_trinh
+        )}
+        {renderContent(Object.keys({ mau_so_chung })[0].replace(/_/g, '-'), mau_so_chung)}
+        {renderContent(
+          Object.keys({ phep_chia_va_so_du })[0].replace(/_/g, '-'),
+          phep_chia_va_so_du
+        )}
+        {renderContent(Object.keys({ so_nguyen_to })[0].replace(/_/g, '-'), so_nguyen_to)}
+        {renderContent(Object.keys({ tich_vector })[0].replace(/_/g, '-'), tich_vector)}
+        {renderContent(Object.keys({ uoc_so_va_boi_so })[0].replace(/_/g, '-'), uoc_so_va_boi_so)}
       </Stack>
     </Container>
   );
