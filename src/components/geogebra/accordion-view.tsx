@@ -10,7 +10,6 @@ import Iconify from 'src/components/iconify';
 //
 import imgFromBase from './images/from-base.png';
 import imgToBase from './images/to-base.png';
-import imgExpand from './images/expand.png';
 import imgFitPolyFunc from './images/fit-poly.function.png';
 import imgFitPolyEx from './images/fit-poly.example.png';
 import imgstdevpFunc from './images/stdevp.function.png';
@@ -42,6 +41,28 @@ import imgFitSinFunc from './images/fitsin.function.png';
 import imgFitSinEx from './images/fitsin.example.png';
 import imgFitGrowthFunc from './images/fitgrowth.function.png';
 import imgFitGrowthEx from './images/fitgrowth.example.png';
+import imgChiSquaredTestFunc from './images/chisquaredtest.function.png';
+import imgChiSquaredTestEx from './images/chisquaredtest.example.png';
+import imgTTestFunc from './images/ttest.function.png';
+import imgTTestEx from './images/ttest.example.png';
+import imgTTestPairedFunc from './images/ttestpaired.function.png';
+import imgTTestPairedEx from './images/ttestpaired.example.png';
+import imgSampleFunc from './images/sample.function.png';
+import imgSampleEx from './images/sample.example.png';
+import imgSampleVarianceFunc from './images/samplevariance.function.png';
+import imgSampleVarianceEx from './images/samplevariance.example.png';
+import imgVarianceFunc from './images/variance.function.png';
+import imgVarianceEx from './images/variance.example.png';
+import imgmeanFunc from './images/mean.function.png';
+import imgmeanEx from './images/mean.example.png';
+import imgRootMeanSquareFunc from './images/rootmeansquare.function.png';
+import imgRootMeanSquareEx from './images/rootmeansquare.example.png';
+import imgHarmonicMeanFunc from './images/harmonicmean.function.png';
+import imgHarmonicMeanEx from './images/harmonicmean.example.png';
+import imgGeometricMeanFunc from './images/geometricmean.function.png';
+import imgGeometricMeanEx from './images/geometricmean.example.png';
+import imgMedianFunc from './images/median.function.png';
+import imgMedianEx from './images/median.example.png';
 
 // ----------------------------------------------------------------------
 
@@ -838,6 +859,302 @@ const hoi_quy: AccordionType[] = [
   },
 ];
 
+const kiem_dinh: AccordionType[] = [
+  {
+    id: 1,
+    heading: 'Hàm ChiSquaredTest()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgChiSquaredTestFunc} alt="img-chisquaredtest-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Matrix: Ma trận</li>
+          <li>Observed List: Danh sách quan sát</li>
+          <li>Expected List: Danh sách dự kiến</li>
+          <li>Observed Matrix: Ma trận quan sát</li>
+          <li>Expected Matrix: Ma trận dự kiến</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <ul>
+          <li>
+            Thực hiện kiểm tra chi bình phương để so sánh ma trận số lượng quan sát được với ma trận
+            số lượng dự kiến được xác định bởi giả thuyết về tính độc lập
+          </li>
+          <li>
+            Thực hiện kiểm tra Mức độ phù hợp để so sánh danh sách số lượng được quan sát nhất định
+            với danh sách số lượng dự kiến
+          </li>
+          <li>
+            Thực hiện kiểm tra chi bình phương để so sánh ma trận số lượng quan sát được với ma trận
+            số lượng dự kiến đã cho
+          </li>
+        </ul>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgChiSquaredTestEx} alt="img-chisquaredtest-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 2,
+    heading: 'Hàm TTest()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgTTestFunc} alt="img-ttest-func" />
+
+        <h4>Tham số:</h4>
+        <p>
+          {
+            'Thực hiện kiểm tra t một mẫu về trung bình tổng thể bằng cách sử dụng danh sách dữ liệu mẫu đã cho. Giá trị trung bình giả thuyết là giá trị trung bình tổng thể được giả định trong giả thuyết khống. Đuôi có thể có các giá trị <, >, ≠. Những điều này xác định giả thuyết thay thế như sau'
+          }
+        </p>
+
+        <h4>Kết quả:</h4>
+        <p>
+          {'Kết quả được trả về dưới dạng danh sách dưới dạng {Giá trị xác suất, thống kê t-test}'}
+        </p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgTTestEx} alt="img-ttest-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 3,
+    heading: 'Hàm TTestPaired()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgTTestPairedFunc} alt="img-ttestpaired-func" />
+
+        <h4>Tham số:</h4>
+        <p>
+          {
+            'Thực hiện kiểm tra t ghép đôi bằng cách sử dụng danh sách dữ liệu mẫu được ghép nối đã cho. Đuôi có các giá trị có thể là "<", ">" , "≠" xác định các giả thuyết thay thế sau:'
+          }
+        </p>
+
+        <h4>Kết quả:</h4>
+        <p>
+          {'Kết quả được trả về dưới dạng danh sách dưới dạng {Giá trị xác suất, thống kê t-test}.'}
+        </p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgTTestPairedEx} alt="img-ttestpaired-ex" />
+      </div>
+    ),
+  },
+];
+
+const mau_va_phuong_sai: AccordionType[] = [
+  {
+    id: 1,
+    heading: 'Hàm Sample()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgSampleFunc} alt="img-sample-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List: Danh sách</li>
+          <li>Size: Kích thước</li>
+          <li>With Replacement: </li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <ul>
+          <li>
+            Trả về danh sách n phần tử được chọn ngẫu nhiên của danh sách; các phần tử có thể được
+            chọn nhiều lần.
+          </li>
+          <li>
+            Trả về danh sách n phần tử được chọn ngẫu nhiên của danh sách. Các phần tử có thể được
+            chọn nhiều lần khi và chỉ khi tham số cuối cùng là đúng.
+          </li>
+        </ul>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgSampleEx} alt="img-sample-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 2,
+    heading: 'Hàm SampleVariance()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgSampleVarianceFunc} alt="img-samplevariance-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Raw Data: Danh sách dữ liệu thô</li>
+          <li>List of Numbers: Danh sách các số</li>
+          <li>List of Frequencies: Danh sách tần số</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <ul>
+          <li>Trả về phương sai mẫu của danh sách số đã cho.</li>
+          <li>Trả về phương sai mẫu của danh sách số đã cho có xét đến tần số </li>
+        </ul>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgSampleVarianceEx} alt="img-samplevariance-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 3,
+    heading: 'Hàm Variance()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgVarianceFunc} alt="img-variance-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Raw Data: Danh sách dữ liệu thô</li>
+          <li>List of Numbers: Danh sách các số</li>
+          <li>List of Frequencies: Danh sách tần số</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <ul>
+          <li>Tính toán phương sai của các phần tử danh sách</li>
+          <li>Tính toán phương sai của các phần tử danh sách, có xét đến tần số</li>
+        </ul>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgVarianceEx} alt="img-variance-ex" />
+      </div>
+    ),
+  },
+];
+
+const trung_binh_va_trung_vi: AccordionType[] = [
+  {
+    id: 1,
+    heading: 'Hàm mean()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgmeanFunc} alt="img-mean-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Raw Data: Danh sách dữ liệu thô</li>
+          <li>List of Numbers: Danh sách các số</li>
+          <li>List of Frequencies: Danh sách tần số</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <ul>
+          <li>Tính giá trị trung bình số học của các phần tử trong danh sách</li>
+          <li>Tính giá trị trung bình có trọng số của các phần tử trong danh sách</li>
+        </ul>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgmeanEx} alt="img-mean-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 2,
+    heading: 'Hàm RootMeanSquare()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgRootMeanSquareFunc} alt="img-rootmeansquare-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Numbers: Danh sách các số</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Trả về bình phương trung bình gốc của danh sách các số đã cho</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgRootMeanSquareEx} alt="img-rootmeansquare-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 3,
+    heading: 'Hàm HarmonicMean()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgHarmonicMeanFunc} alt="img-harmonicmean-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Numbers: Danh sách các số</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Trả về giá trị trung bình điều hòa của danh sách số đã cho</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgHarmonicMeanEx} alt="img-harmonicmean-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 4,
+    heading: 'Hàm GeometricMean()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgGeometricMeanFunc} alt="img-geometricmean-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Numbers: Danh sách các số</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Trả về giá trị trung bình hình học của danh sách số đã cho</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgGeometricMeanEx} alt="img-geometricmean-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 5,
+    heading: 'Hàm Median()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgMedianFunc} alt="img-median-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Raw Data: Danh sách các điểm</li>
+          <li>List of Numbers: Danh sách số</li>
+          <li>List of Frequencies: Danh sách tần số</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <ul>
+          <li>Xác định trung vị của các phần tử trong danh sách</li>
+          <li>Tính toán trung vị có trọng số của các phần tử trong danh sách</li>
+        </ul>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgMedianEx} alt="img-median-ex" />
+      </div>
+    ),
+  },
+];
+
 const chuyen_co_so: AccordionType[] = [
   {
     id: 1,
@@ -984,6 +1301,12 @@ export default function AccordionView(props: Props) {
         {renderContent(Object.keys({ he_so_tuong_quan })[0].replace(/_/g, '-'), he_so_tuong_quan)}
         {renderContent(Object.keys({ xich_ma })[0].replace(/_/g, '-'), xich_ma)}
         {renderContent(Object.keys({ hoi_quy })[0].replace(/_/g, '-'), hoi_quy)}
+        {renderContent(Object.keys({ kiem_dinh })[0].replace(/_/g, '-'), kiem_dinh)}
+        {renderContent(Object.keys({ mau_va_phuong_sai })[0].replace(/_/g, '-'), mau_va_phuong_sai)}
+        {renderContent(
+          Object.keys({ trung_binh_va_trung_vi })[0].replace(/_/g, '-'),
+          trung_binh_va_trung_vi
+        )}
       </Stack>
     </Container>
   );

@@ -17,7 +17,10 @@ export default function Page() {
       </Helmet>
 
       <Container maxWidth={false}>
-        <GeoGebra appName="classic" showToolBar={false} filename={GGB} />
+        <GeoGebra appName="classic" showToolBar={false} filename={GGB}
+        id="trung-binh-va-trung-vi"
+        title="Trung bình và trung vị"
+         />
       </Container>
     </>
   );
