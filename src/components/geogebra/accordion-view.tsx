@@ -87,6 +87,16 @@ import imgPrimeFactorsFunc from './images/primefactos.function.png';
 import imgPrimeFactorsEx from './images/primefactors.example.png';
 import imgDivisorsFunc from './images/divisors.function.png';
 import imgDivisorsEx from './images/divisors.example.png';
+import imgDivisorsSumFunc from './images/divisorssum.function.png';
+import imgDivisorsSumEx from './images/divisorssum.example.png';
+import imgGCDFunc from './images/gcd.function.png';
+import imgGCDEx from './images/gcd.example.png';
+import imgLCMFunc from './images/lcm.function.png';
+import imgLCMEx from './images/lcm.example.png';
+import imgFactorFunc from './images/factor.function.png';
+import imgFactorEx from './images/factor.example.png';
+import imgIFactorFunc from './images/ifactor.function.png';
+import imgIFactorEx from './images/ifactor.example.png';
 
 // ----------------------------------------------------------------------
 
@@ -1522,6 +1532,51 @@ const tich_vector: AccordionType[] = [
   },
 ];
 
+const thua_so_va_so_vo_ty: AccordionType[] = [
+  {
+    id: 1,
+    heading: 'Hàm Factor()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgFactorFunc} alt="img-factor-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Polynomial: Đa thức</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Phân tích thừa số</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgFactorEx} alt="img-factor-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 2,
+    heading: 'Hàm IFactor()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgIFactorFunc} alt="img-ifactor-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Polynomial: Đa thức</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Kết quả phân tích thành thừa số trên các số vô tỷ</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgIFactorEx} alt="img-ifactor-ex" />
+      </div>
+    ),
+  },
+];
+
 const uoc_so_va_boi_so: AccordionType[] = [
   {
     id: 1,
@@ -1541,6 +1596,77 @@ const uoc_so_va_boi_so: AccordionType[] = [
 
         <h4>Ví dụ:</h4>
         <img src={imgDivisorsEx} alt="img-divisors-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 2,
+    heading: 'Hàm DivisorsSum()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgDivisorsSumFunc} alt="img-divisorssum-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>Number: Số cho trước</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <p>Tính tổng của tất cả các ước số dương, kể cả chính số đó</p>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgDivisorsSumEx} alt="img-divisorssum-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 3,
+    heading: 'Hàm GCD()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgGCDFunc} alt="img-gcd-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Numbers: Danh sách các số</li>
+          <li>Number: Số cho trước</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <ul>
+          <li>Tính ước chung lớn nhất của hai số</li>
+          <li>Tính ước chung lớn nhất của dãy số</li>
+        </ul>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgGCDEx} alt="img-gcd-ex" />
+      </div>
+    ),
+  },
+  {
+    id: 4,
+    heading: 'Hàm LCM()',
+    detail: (
+      <div>
+        <h4>Cách sử dụng</h4>
+        <img src={imgLCMFunc} alt="img-lcm-func" />
+
+        <h4>Tham số:</h4>
+        <ul>
+          <li>List of Numbers: Danh sách các số</li>
+          <li>Number: Số cho trước</li>
+        </ul>
+
+        <h4>Kết quả:</h4>
+        <ul>
+          <li>Tính bội số chung nhỏ nhất của hai số</li>
+          <li>Tính bội số chung nhỏ nhất của các phần tử trong danh sách</li>
+        </ul>
+
+        <h4>Ví dụ:</h4>
+        <img src={imgLCMEx} alt="img-lcm-ex" />
       </div>
     ),
   },
@@ -1634,6 +1760,10 @@ export default function AccordionView(props: Props) {
         )}
         {renderContent(Object.keys({ so_nguyen_to })[0].replace(/_/g, '-'), so_nguyen_to)}
         {renderContent(Object.keys({ tich_vector })[0].replace(/_/g, '-'), tich_vector)}
+        {renderContent(
+          Object.keys({ thua_so_va_so_vo_ty })[0].replace(/_/g, '-'),
+          thua_so_va_so_vo_ty
+        )}
         {renderContent(Object.keys({ uoc_so_va_boi_so })[0].replace(/_/g, '-'), uoc_so_va_boi_so)}
       </Stack>
     </Container>

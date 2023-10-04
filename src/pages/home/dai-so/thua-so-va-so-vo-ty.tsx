@@ -17,7 +17,13 @@ export default function Page() {
       </Helmet>
 
       <Container maxWidth={false}>
-        <GeoGebra appName="classic" showToolBar={false} filename={GGB} />
+        <GeoGebra
+          appName="classic"
+          showToolBar={false}
+          filename={GGB}
+          id="thua-so-va-so-vo-ty"
+          title="Thừa số và số vô tỷ"
+        />
       </Container>
     </>
   );
