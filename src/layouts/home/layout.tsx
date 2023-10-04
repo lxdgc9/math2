@@ -50,7 +50,7 @@ export default function HomeLayout({ children }: Props) {
   if (isMini) {
     return (
       <>
-        <Header onOpenNav={nav.onTrue} />
+        {process.env.REACT_APP_AUTH && <Header onOpenNav={nav.onTrue} />}
 
         <Box
           sx={{
