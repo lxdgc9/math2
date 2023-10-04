@@ -179,11 +179,13 @@ export default function Page() {
 
           <Grid item xs={12} md={8}>
             <Card sx={{ height: '100%', maxHeight: '600px' }}>
-              <CardHeader title="Biểu đồ dữ liệu dạng miền" />
+              <Scrollbar sx={{ maxHeight: '600px' }}>
+                <CardHeader title="Biểu đồ dữ liệu dạng miền" />
 
-              <CardContent>
-                <Chart dir="ltr" type="area" series={chartValue} options={chartOptions} />
-              </CardContent>
+                <CardContent>
+                  <Chart dir="ltr" type="area" series={chartValue} options={chartOptions} />
+                </CardContent>
+              </Scrollbar>
             </Card>
           </Grid>
         </Grid>

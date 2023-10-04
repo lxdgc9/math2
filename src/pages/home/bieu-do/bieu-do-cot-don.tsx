@@ -138,18 +138,20 @@ export default function Page() {
 
           <Grid item xs={12} md={8}>
             <Card sx={{ height: '100%', maxHeight: '600px' }}>
-              <CardHeader title="Biểu đồ dữ liệu dạng cột" />
+              <Scrollbar sx={{ maxHeight: '600px' }}>
+                <CardHeader title="Biểu đồ dữ liệu dạng cột" />
 
-              <CardContent>
-                <Chart
-                  dir="ltr"
-                  type="bar"
-                  series={[
-                    { name: chartValue.name, data: chartValue.data.map((item) => item.value) },
-                  ]}
-                  options={chartOptions}
-                />
-              </CardContent>
+                <CardContent>
+                  <Chart
+                    dir="ltr"
+                    type="bar"
+                    series={[
+                      { name: chartValue.name, data: chartValue.data.map((item) => item.value) },
+                    ]}
+                    options={chartOptions}
+                  />
+                </CardContent>
+              </Scrollbar>
             </Card>
           </Grid>
         </Grid>
