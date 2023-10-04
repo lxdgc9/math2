@@ -101,15 +101,7 @@ const GiaiMaOchu = lazy(() => import('src/pages/home/tro-choi/giai-ma-o-chu'));
 export const homeRoutes = [
   {
     path: 'home',
-    element: process.env.REACT_APP_AUTH ? (
-      <AuthGuard>
-        <HomeLayout>
-          <Suspense fallback={<LoadingScreen />}>
-            <Outlet />
-          </Suspense>
-        </HomeLayout>
-      </AuthGuard>
-    ) : (
+    element: (
       <HomeLayout>
         <Suspense fallback={<LoadingScreen />}>
           <Outlet />

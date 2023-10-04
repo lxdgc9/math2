@@ -49,15 +49,14 @@ export default function Main({ children, sx, ...other }: BoxProps) {
         minHeight: 1,
         display: 'flex',
         flexDirection: 'column',
-        py: 5,
-        // py: `${HEADER.H_MOBILE + SPACING}px`,
-        // ...(lgUp && {
-        //   py: `${HEADER.H_DESKTOP + SPACING}px`,
-        //   width: `calc(100% - ${NAV.W_VERTICAL}px)`,
-        //   ...(isNavMini && {
-        //     width: `calc(100% - ${NAV.W_MINI}px)`,
-        //   }),
-        // }),
+        py: `${HEADER.H_MOBILE + SPACING}px`,
+        ...(lgUp && {
+          py: `${HEADER.H_DESKTOP + SPACING}px`,
+          width: `calc(100% - ${NAV.W_VERTICAL}px)`,
+          ...(isNavMini && {
+            width: `calc(100% - ${NAV.W_MINI}px)`,
+          }),
+        }),
         ...sx,
       }}
       {...other}

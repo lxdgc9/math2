@@ -38,9 +38,9 @@ export default function HomeLayout({ children }: Props) {
   if (isHorizontal) {
     return (
       <>
-        {process.env.REACT_APP_AUTH && <Header onOpenNav={nav.onTrue} />}
+        <Header onOpenNav={nav.onTrue} />
 
-        {process.env.REACT_APP_MENU && lgUp ? renderHorizontal : renderNavVertical}
+        {lgUp ? renderHorizontal : renderNavVertical}
 
         <Main>{children}</Main>
       </>
@@ -50,7 +50,7 @@ export default function HomeLayout({ children }: Props) {
   if (isMini) {
     return (
       <>
-        {process.env.REACT_APP_AUTH && <Header onOpenNav={nav.onTrue} />}
+        <Header onOpenNav={nav.onTrue} />
 
         <Box
           sx={{
@@ -59,7 +59,7 @@ export default function HomeLayout({ children }: Props) {
             flexDirection: { xs: 'column', md: 'row' },
           }}
         >
-          {process.env.REACT_APP_MENU && lgUp ? renderNavMini : renderNavVertical}
+          {lgUp ? renderNavMini : renderNavVertical}
 
           <Main>{children}</Main>
         </Box>
@@ -69,7 +69,7 @@ export default function HomeLayout({ children }: Props) {
 
   return (
     <>
-      {process.env.REACT_APP_AUTH && <Header onOpenNav={nav.onTrue} />}
+      <Header onOpenNav={nav.onTrue} />
 
       <Box
         sx={{
@@ -78,7 +78,7 @@ export default function HomeLayout({ children }: Props) {
           flexDirection: { xs: 'column', md: 'row' },
         }}
       >
-        {process.env.REACT_APP_MENU && renderNavVertical}
+        {renderNavVertical}
 
         <Main>{children}</Main>
       </Box>
