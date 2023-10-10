@@ -65,6 +65,7 @@ import imgSigmaEx from './images/sigma.example.png';
 import imgFromBaseFunc from './images/frombase.function.png';
 import imgFromBaseEx from './images/frombase.example.png';
 import imgToBaseFunc from './images/tobase.function.png';
+import imgToBaseEx from './images/tobase.example.png';
 import imgSolveFunc from './images/solve.function.png';
 import imgSolveEx from './images/solve.example.png';
 import imgExpandFunc from './images/expand.function.png';
@@ -1277,7 +1278,7 @@ const chuyen_co_so: AccordionType[] = [
         <p>Chuyển đổi số đã cho thành cơ số khác nhau</p>
 
         <h4>Ví dụ:</h4>
-        <img src={imgFromBaseEx} alt="img-fromabase-func" />
+        <img src={imgToBaseEx} alt="img-tobase-ex" />
       </div>
     ),
   },
