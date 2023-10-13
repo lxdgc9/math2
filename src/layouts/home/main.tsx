@@ -18,7 +18,7 @@ export default function Main({ children, sx, ...other }: BoxProps) {
 
   const isNavHorizontal = settings.themeLayout === 'horizontal';
 
-  const isNavMini = settings.themeLayout === 'mini';
+  // const isNavMini = settings.themeLayout === 'mini';
 
   if (isNavHorizontal) {
     return (
