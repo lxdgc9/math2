@@ -98,6 +98,8 @@ import imgFactorFunc from './images/factor.function.png';
 import imgFactorEx from './images/factor.example.png';
 import imgIFactorFunc from './images/ifactor.function.png';
 import imgIFactorEx from './images/ifactor.example.png';
+import imgFx1 from './images/fx1.png';
+import imgFx2 from './images/fx2.png';
 
 // ----------------------------------------------------------------------
 
@@ -1231,7 +1233,7 @@ const xich_ma: AccordionType[] = [
     heading: 'Hàm SigmaYY()',
     detail: (
       <div>
-        <p>Tương tự SigmaYY()</p>
+        <p>Tương tự SigmaXX()</p>
       </div>
     ),
   },
@@ -1673,6 +1675,38 @@ const uoc_so_va_boi_so: AccordionType[] = [
   },
 ];
 
+const do_thi_ham_so: AccordionType[] = [
+  {
+    id: 1,
+    heading: 'Đây là hướng dẫn chung về đồ thị hàm số',
+    detail: (
+      <div>
+        <h4>Khung bên trái</h4>
+        <img src={imgFx1} alt="img-fx1" />
+        <ul>
+          <li>Đây là nơi chúng ta nhập vào các hàm số tương ứng</li>
+          <li>Từng hàm số sẽ được phân màu khác nhau</li>
+        </ul>
+
+        <h4>Khung bên phải</h4>
+        <img src={imgFx2} alt="img-fx2" />
+        <ul>
+          <li>Đồ thị hàm số trên trục tọa độ tương ứng với các hàm số ở khung bên trái</li>
+          <li>Mỗi đồ thị sẽ có màu tương ứng với hàm số được phân màu</li>
+        </ul>
+      </div>
+    ),
+  },
+];
+
+const hinh_hoc: AccordionType[] = [
+  {
+    id: 1,
+    heading: 'Lưu ý',
+    detail: <p>Đây chỉ là các ví dụ về hình học, các bộ công cụ vẽ sẽ nằm trong phần thực hành</p>,
+  },
+];
+
 // ----------------------------------------------------------------------
 
 type Props = {
@@ -1766,6 +1800,8 @@ export default function AccordionView(props: Props) {
           thua_so_va_so_vo_ty
         )}
         {renderContent(Object.keys({ uoc_so_va_boi_so })[0].replace(/_/g, '-'), uoc_so_va_boi_so)}
+        {renderContent(Object.keys({ do_thi_ham_so })[0].replace(/_/g, '-'), do_thi_ham_so)}
+        {renderContent(Object.keys({ hinh_hoc })[0].replace(/_/g, '-'), hinh_hoc)}
       </Stack>
     </Container>
   );

@@ -17,7 +17,7 @@ export default function Page() {
       </Helmet>
 
       <Container maxWidth={false}>
-        <GeoGebra appName="classic" filename={GGB} />
+        <GeoGebra appName="classic" filename={GGB} language="vi" showInstructions />
       </Container>
     </>
   );
