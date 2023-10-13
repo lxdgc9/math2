@@ -5,11 +5,11 @@ import { useResponsive } from 'src/hooks/use-responsive';
 // components
 import { useSettingsContext } from 'src/components/settings';
 //
-import { HEADER, NAV } from '../config-layout';
+import { HEADER } from '../config-layout';
 
 // ----------------------------------------------------------------------
 
-const SPACING = 8;
+// const SPACING = 8;
 
 export default function Main({ children, sx, ...other }: BoxProps) {
   const settings = useSettingsContext();
