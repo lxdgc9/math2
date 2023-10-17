@@ -3,10 +3,10 @@ import { useEffect, useRef, useState } from 'react';
 import Geogebra from 'react-geogebra';
 // Components
 import { LoadingScreen } from '../loading-screen';
-import Turtorial from './Turtorial';
+// import Turtorial from './Turtorial';
 
 export default function GeoGebra(props: any) {
-  const { id, title } = props;
+  // const { id, title } = props;
   const [width, setWidth] = useState(0);
   const ref = useRef<any>(null);
 
