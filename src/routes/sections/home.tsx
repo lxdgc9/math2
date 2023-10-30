@@ -81,6 +81,15 @@ const HinhLapPhuong = lazy(() => import('src/pages/home/hinh-hoc-khong-gian/hinh
 const HinhNon = lazy(() => import('src/pages/home/hinh-hoc-khong-gian/hinh-non'));
 const HinhTru = lazy(() => import('src/pages/home/hinh-hoc-khong-gian/hinh-tru'));
 const MatPhang = lazy(() => import('src/pages/home/hinh-hoc-khong-gian/mat-phang'));
+// bổ sung hình học theo tiêu chuẩn kỹ thuật
+const HinhBinhHanh2D = lazy(() => import('src/pages/home/hinh-hoc-phang/bo-sung/hinh-binh-hanh'));
+const HinhChuNhat2D = lazy(() => import('src/pages/home/hinh-hoc-phang/bo-sung/hinh-chu-nhat'));
+const HinhHop2D = lazy(() => import('src/pages/home/hinh-hoc-phang/bo-sung/hinh-hop'));
+const HinhThoi2D = lazy(() => import('src/pages/home/hinh-hoc-phang/bo-sung/hinh-thoi'));
+const HinhTron2D = lazy(() => import('src/pages/home/hinh-hoc-phang/bo-sung/hinh-tron'));
+const HinhTru2D = lazy(() => import('src/pages/home/hinh-hoc-phang/bo-sung/hinh-tru'));
+const HinhVuong2D = lazy(() => import('src/pages/home/hinh-hoc-phang/bo-sung/hinh-vuong'));
+const HinhTamGiac2D = lazy(() => import('src/pages/home/hinh-hoc-phang/bo-sung/hinh-tam-giac'));
 // lý thuyết
 const ThongKeVaXacXuat = lazy(() => import('src/pages/home/ly-thuyet/thong-ke-va-xac-suat'));
 const DaiSoVaGiaiTich = lazy(() => import('src/pages/home/ly-thuyet/dai-so-va-giai-tich'));
@@ -202,6 +211,14 @@ export const homeRoutes = [
           { path: 'diem-va-doan-thang', element: <DiemVaDoanThang /> },
           { path: 'duong-tron', element: <DuongTron /> },
           { path: 'goc-va-phep-quay', element: <GocVaPhepQuay /> },
+          { path: 'hinh-binh-hanh', element: <HinhBinhHanh2D /> },
+          { path: 'hinh-chu-nhat', element: <HinhChuNhat2D /> },
+          { path: 'hinh-hop', element: <HinhHop2D /> },
+          { path: 'hinh-thoi', element: <HinhThoi2D /> },
+          { path: 'hinh-tron', element: <HinhTron2D /> },
+          { path: 'hinh-tru', element: <HinhTru2D /> },
+          { path: 'hinh-vuong', element: <HinhVuong2D /> },
+          { path: 'hinh-tam-giac', element: <HinhTamGiac2D /> },
         ],
       },
       {
