@@ -22,6 +22,8 @@ export const paths = {
     homepage: ROOTS.HOME,
     bieu_do: {
       root: `${ROOTS.HOME}/bieu-do`,
+      bieu_do_tranh: `${ROOTS.HOME}/bieu-do/bieu-do-tranh`,
+      bieu_do_doan_thang: `${ROOTS.HOME}/bieu-do/bieu-do-doan-thang`,
       bieu_do_duong: `${ROOTS.HOME}/bieu-do/bieu-do-duong`,
       bieu_do_mien: `${ROOTS.HOME}/bieu-do/bieu-do-mien`,
       bieu_do_cot_don: `${ROOTS.HOME}/bieu-do/bieu-do-cot-don`,
@@ -29,6 +31,10 @@ export const paths = {
       bieu_do_cot_chong: `${ROOTS.HOME}/bieu-do/bieu-do-cot-chong`,
       bieu_do_quat: `${ROOTS.HOME}/bieu-do/bieu-do-quat`,
       bieu_do_dien_tich: `${ROOTS.HOME}/bieu-do/bieu-do-dien-tich`,
+    },
+    tan_so: {
+      root: `${ROOTS.HOME}/tan-so`,
+      bang_tan_so: `${ROOTS.HOME}/tan-so/bang-tan-so`,
     },
     xac_suat: {
       root: `${ROOTS.HOME}/xac-suat`,
@@ -92,6 +98,14 @@ export const paths = {
       diem_va_doan_thang: `${ROOTS.HOME}/hinh-hoc-phang/diem-va-doan-thang`,
       duong_tron: `${ROOTS.HOME}/hinh-hoc-phang/duong-tron`,
       goc_va_phep_quay: `${ROOTS.HOME}/hinh-hoc-phang/goc-va-phep-quay`,
+      hinh_binh_hanh: `${ROOTS.HOME}/hinh-hoc-phang/hinh-binh-hanh`,
+      hinh_chu_nhat: `${ROOTS.HOME}/hinh-hoc-phang/hinh-chu-nhat`,
+      hinh_hop: `${ROOTS.HOME}/hinh-hoc-phang/hinh-hop`,
+      hinh_thoi: `${ROOTS.HOME}/hinh-hoc-phang/hinh-thoi`,
+      hinh_tron: `${ROOTS.HOME}/hinh-hoc-phang/hinh-tron`,
+      hinh_tru: `${ROOTS.HOME}/hinh-hoc-phang/hinh-tru`,
+      hinh_vuong: `${ROOTS.HOME}/hinh-hoc-phang/hinh-vuong`,
+      hinh_tam_giac: `${ROOTS.HOME}/hinh-hoc-phang/hinh-tam-giac`,
     },
     hinh_hoc_khong_gian: {
       root: `${ROOTS.HOME}/hinh-hoc-khong-gian`,

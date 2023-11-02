@@ -14,6 +14,7 @@ const icon = (name: string) => (
 
 const ICONS = {
   bieu_do: icon('bieu_do'),
+  tan_so: icon('tan_so'),
   xac_suat: icon('xac_suat'),
   thong_ke: icon('thong_ke'),
   dai_so: icon('dai_so'),
@@ -42,6 +43,14 @@ export function useNavData() {
             icon: ICONS.bieu_do,
             children: [
               {
+                title: t('Biểu đồ tranh'),
+                path: paths.home.bieu_do.bieu_do_tranh,
+              },
+              {
+                title: t('Biểu đồ đoạn thẳng'),
+                path: paths.home.bieu_do.bieu_do_doan_thang,
+              },
+              {
                 title: t('Biểu đồ đường'),
                 path: paths.home.bieu_do.bieu_do_duong,
               },
@@ -68,6 +77,17 @@ export function useNavData() {
               {
                 title: t('Biểu đồ diện tích'),
                 path: paths.home.bieu_do.bieu_do_dien_tich,
+              },
+            ],
+          },
+          {
+            title: t('Tần số'),
+            path: paths.home.tan_so.root,
+            icon: ICONS.tan_so,
+            children: [
+              {
+                title: t('Bảng tần số'),
+                path: paths.home.tan_so.bang_tan_so,
               },
             ],
           },
@@ -296,6 +316,38 @@ export function useNavData() {
               {
                 title: t('Góc và phép quay'),
                 path: paths.home.hinh_hoc_phang.goc_va_phep_quay,
+              },
+              {
+                title: t('Hình bình hành'),
+                path: paths.home.hinh_hoc_phang.hinh_binh_hanh,
+              },
+              {
+                title: t('Hình chữ nhật'),
+                path: paths.home.hinh_hoc_phang.hinh_chu_nhat,
+              },
+              {
+                title: t('Hình hộp'),
+                path: paths.home.hinh_hoc_phang.hinh_hop,
+              },
+              {
+                title: t('Hình thoi'),
+                path: paths.home.hinh_hoc_phang.hinh_thoi,
+              },
+              {
+                title: t('Hình tròn'),
+                path: paths.home.hinh_hoc_phang.hinh_tron,
+              },
+              {
+                title: t('Hình trụ'),
+                path: paths.home.hinh_hoc_phang.hinh_tru,
+              },
+              {
+                title: t('Hình vuông'),
+                path: paths.home.hinh_hoc_phang.hinh_vuong,
+              },
+              {
+                title: t('Hình tam giác'),
+                path: paths.home.hinh_hoc_phang.hinh_tam_giac,
               },
             ],
           },

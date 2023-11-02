@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 // auth
-import { AuthGuard } from 'src/auth/guard';
+// import { AuthGuard } from 'src/auth/guard';
 // layouts
 import HomeLayout from 'src/layouts/home';
 // components
@@ -12,6 +12,8 @@ import { LoadingScreen } from 'src/components/loading-screen';
 // Page
 const IndexPage = lazy(() => import('src/pages/home/home'));
 // biểu đồ
+const BieuDoTranh = lazy(() => import('src/pages/home/bieu-do/bieu-do-tranh'));
+const BieuDoDoanThang = lazy(() => import('src/pages/home/bieu-do/bieu-do-doan-thang'));
 const BieuDoDuong = lazy(() => import('src/pages/home/bieu-do/bieu-do-duong'));
 const BieuDoMien = lazy(() => import('src/pages/home/bieu-do/bieu-do-mien'));
 const BieuDoCotDon = lazy(() => import('src/pages/home/bieu-do/bieu-do-cot-don'));
@@ -19,6 +21,8 @@ const BieuDoCotKep = lazy(() => import('src/pages/home/bieu-do/bieu-do-cot-kep')
 const BieuDoCotChong = lazy(() => import('src/pages/home/bieu-do/bieu-do-cot-chong'));
 const BieuDoQuat = lazy(() => import('src/pages/home/bieu-do/bieu-do-quat'));
 const BieuDoDienTich = lazy(() => import('src/pages/home/bieu-do/bieu-do-dien-tich'));
+// tần số
+const BangTanSo = lazy(() => import('src/pages/home/tan-so/bang-tan-so'));
 // xác suất
 const PhanPhoiChuan = lazy(() => import('src/pages/home/xac-suat/phan-phoi-chuan'));
 const PhanPhoiStudent = lazy(() => import('src/pages/home/xac-suat/phan-phoi-student'));
@@ -123,6 +127,8 @@ export const homeRoutes = [
         path: 'bieu-do',
         children: [
           { element: <BieuDoDuong />, index: true },
+          { path: 'bieu-do-tranh', element: <BieuDoTranh /> },
+          { path: 'bieu-do-doan-thang', element: <BieuDoDoanThang /> },
           { path: 'bieu-do-duong', element: <BieuDoDuong /> },
           { path: 'bieu-do-mien', element: <BieuDoMien /> },
           { path: 'bieu-do-cot-don', element: <BieuDoCotDon /> },
@@ -132,7 +138,13 @@ export const homeRoutes = [
           { path: 'bieu-do-dien-tich', element: <BieuDoDienTich /> },
         ],
       },
-
+      {
+        path: 'tan-so',
+        children: [
+          { element: <BangTanSo />, index: true },
+          { path: 'bang-tan-so', element: <BangTanSo /> },
+        ],
+      },
       {
         path: 'xac-suat',
         children: [
